@@ -3,11 +3,12 @@ import PropTypes from 'prop-types';
 
 class MainComponent extends React.Component {
     render () {
-        return <div>Hello world! {this.props.children}</div>;
+        return <div className={this.props.klasa}>Hello world! {this.props.children}</div>;
     }
 }
 
 MainComponent.propTypes = {
+    klasa: PropTypes.string.isRequired,
     children: PropTypes.string.isRequired
 }
 

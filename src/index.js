@@ -6,8 +6,8 @@ import registerServiceWorker from './registerServiceWorker';
 
 const Scene = () => (
     <div>
-        <MainComponent>aaa</MainComponent>
-        <MainComponent><strong>bbb</strong></MainComponent>
+        <MainComponent klasa="red">aaa</MainComponent>
+        <MainComponent klasa="blue" >bbb</MainComponent>
     </div>
 );
 
