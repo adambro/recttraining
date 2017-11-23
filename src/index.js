@@ -1,17 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import MainComponent from './MainComponent';
+import Input from './Input';
 import './index.css';
 import registerServiceWorker from './registerServiceWorker';
 
 const divStyle = {
-    backgroundColor: 'grey'
+    backgroundColor: 'while'
 };
 
 const Scene = (props) => (
     <div style={props.style}>
         <MainComponent klasa="red">aaa</MainComponent>
         <MainComponent>bbb</MainComponent>
+        <Input />
     </div>
 );
 
