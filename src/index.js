@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Input from './Input';
+import Filter from './Filter';
 import Presenter from './Presenter';
 import './index.css';
 import registerServiceWorker from './registerServiceWorker';
@@ -27,12 +28,19 @@ class Scene extends React.Component {
         localStorage.setItem('posts', JSON.stringify(posts));
     }
 
+    handleFilter = (form) => {
+        this.setState({
+            filter: form.filter
+        })
+    }
+
     render () {
         console.log(this.state, 'index')
         return (
         <div>
+            <Filter process={this.handleFilter} />
             <ul>
-                {this.state.posts.map(post => <Presenter text={post.text} />)}
+                {this.state.posts.filter(post => post.text.includes(this.state.filter)).map(post => <Presenter text={post.text} />)}
             </ul>
             <Input process={this.handleSubmit} />
         </div>
