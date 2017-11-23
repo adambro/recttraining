@@ -3,12 +3,8 @@ import PropTypes from 'prop-types';
 
 class MainComponent extends React.Component {
     render () {
-        return <MainScene>Hello world</MainScene>;
+        return <div>Hello world! {this.props.children}</div>;
     }
-}
-
-const MainScene = (props) => {
-    return (<div>{props.children}</div>);
 }
 
 MainComponent.propTypes = {

@@ -4,5 +4,5 @@ import MainComponent from './MainComponent';
 import './index.css';
 import registerServiceWorker from './registerServiceWorker';
 
-ReactDOM.render(<MainComponent />, document.getElementById('root'));
+ReactDOM.render(<MainComponent>test</MainComponent>, document.getElementById('root'));
 registerServiceWorker();

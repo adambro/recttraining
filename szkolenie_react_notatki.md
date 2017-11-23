@@ -27,3 +27,4 @@
 
 * niejasne instrukcje
 * nie wiem jak wyświetlić - npm start
+* TIP: co to jest `children` w React? Jak tego użyć?
