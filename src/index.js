@@ -8,12 +8,12 @@ const divStyle = {
     color: 'green'
 };
 
-const Scene = () => (
-    <div>
+const Scene = (props) => (
+    <div style={props.style}>
         <MainComponent klasa="red">aaa</MainComponent>
-        <MainComponent style={divStyle} >bbb</MainComponent>
+        <MainComponent>bbb</MainComponent>
     </div>
 );
 
-ReactDOM.render(<Scene />, document.getElementById('root'));
+ReactDOM.render(<Scene style={divStyle}/>, document.getElementById('root'));
 registerServiceWorker();
