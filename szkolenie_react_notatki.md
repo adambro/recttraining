@@ -28,3 +28,7 @@
 * niejasne instrukcje
 * nie wiem jak wyświetlić - npm start
 * TIP: co to jest `children` w React? Jak tego użyć?
+
+## Zad4
+
+* arrow function is automatically bind, otherwise `this.onChangeText = this.onChangeText.bind(this)`
