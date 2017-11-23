@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Input from './Input';
+import Presenter from './Presenter';
 import './index.css';
 import registerServiceWorker from './registerServiceWorker';
 
@@ -12,13 +13,15 @@ class Scene extends React.Component {
     constructor() {
         super();
         this.state = {
-            post: {}
+            posts: []
         };
     }
 
     handleSubmit = (post) => {
+        let posts = this.state.posts;
+        posts.push(post);
         this.setState({
-            post
+            posts
         });
     }
 
@@ -26,7 +29,9 @@ class Scene extends React.Component {
         console.log(this.state, 'index')
         return (
         <div>
-            {this.state.post.text}
+            <ul>
+                {this.state.posts.map(post => <Presenter text={post.text} />)}
+            </ul>
             <Input process={this.handleSubmit} />
         </div>
         )
