@@ -4,5 +4,12 @@ import MainComponent from './MainComponent';
 import './index.css';
 import registerServiceWorker from './registerServiceWorker';
 
-ReactDOM.render(<MainComponent>test</MainComponent>, document.getElementById('root'));
+const Scene = () => (
+    <div>
+        <MainComponent>aaa</MainComponent>
+        <MainComponent><strong>bbb</strong></MainComponent>
+    </div>
+);
+
+ReactDOM.render(<Scene />, document.getElementById('root'));
 registerServiceWorker();
