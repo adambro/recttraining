@@ -11,15 +11,25 @@ const divStyle = {
 class Scene extends React.Component {
     constructor() {
         super();
-        this.state = {};
+        this.state = {
+            post: {}
+        };
     }
 
     handleSubmit = (post) => {
-        this.setState(post);
+        this.setState({
+            post
+        });
     }
 
     render () {
-        return <Input process={this.handleSubmit} />
+        console.log(this.state, 'index')
+        return (
+        <div>
+            {this.state.post.text}
+            <Input process={this.handleSubmit} />
+        </div>
+        )
     }
 }
 

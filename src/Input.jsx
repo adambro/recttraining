@@ -16,13 +16,18 @@ class Input extends React.Component {
         })
     }
 
+    onClick = () => {
+        console.log(this.state, 'Input');
+        this.props.process(this.state)
+    }
+
     render () {
         return (
         <form>
-            Name: <input name="username" value={this.state.username} /><br />
-            Image: <input name="image" /><br />
+            Name: <input name="username" defaultValue={this.state.username} /><br />
+            Image: <input name="image" defaultValue="" /><br />
             Text: <textarea name="text" value={this.state.text} onChange={this.onChangeText}/><br />
-            <button type="submit" onClick={this.props.process}>Go!</button>
+            <button type="submit" onClick={this.onClick}>Go!</button>
         </form>
     )}
 }
