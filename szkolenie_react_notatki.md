@@ -37,3 +37,6 @@
 
 * TIP: jak zrobić for - użyć map :)
 
+## Zad8
+
+* TIP: gdzie wrzucić <Router>?

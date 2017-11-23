@@ -6,6 +6,11 @@ import Presenter from './Presenter';
 import './index.css';
 import registerServiceWorker from './registerServiceWorker';
 
+import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
+import MainComponent from './MainComponent';
+
+
+
 const divStyle = {
     backgroundColor: 'while'
 };
@@ -48,6 +53,16 @@ class Scene extends React.Component {
     }
 }
 
+const routes = <Router>
+<div>
+    <ul>
+        <li><Link to='/main'>Main</Link></li>
+        <li><Link to='/scene'>Scene</Link></li>
+    </ul>
+    <Route component={MainComponent} exact path='/main' />
+    <Route component={Scene} exact path='/scene' />
+</div>
+</Router>
 
-ReactDOM.render(<Scene style={divStyle} />, document.getElementById('root'));
+ReactDOM.render(routes, document.getElementById('root'));
 registerServiceWorker();
