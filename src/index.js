@@ -4,10 +4,14 @@ import MainComponent from './MainComponent';
 import './index.css';
 import registerServiceWorker from './registerServiceWorker';
 
+const divStyle = {
+    color: 'green'
+};
+
 const Scene = () => (
     <div>
         <MainComponent klasa="red">aaa</MainComponent>
-        <MainComponent klasa="blue" >bbb</MainComponent>
+        <MainComponent style={divStyle} >bbb</MainComponent>
     </div>
 );
 
