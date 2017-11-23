@@ -5,7 +5,7 @@ import './index.css';
 import registerServiceWorker from './registerServiceWorker';
 
 const divStyle = {
-    color: 'green'
+    backgroundColor: 'grey'
 };
 
 const Scene = (props) => (
