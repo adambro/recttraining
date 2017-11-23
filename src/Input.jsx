@@ -23,12 +23,12 @@ class Input extends React.Component {
 
     render () {
         return (
-        <form>
+        <div>
             Name: <input name="username" defaultValue={this.state.username} /><br />
             Image: <input name="image" defaultValue="" /><br />
             Text: <textarea name="text" value={this.state.text} onChange={this.onChangeText}/><br />
-            <button type="submit" onClick={this.onClick}>Go!</button>
-        </form>
+            <button onClick={this.onClick}>Go!</button>
+        </div>
     )}
 }
 
