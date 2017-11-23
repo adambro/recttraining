@@ -35,3 +35,5 @@
 
 ## Zad5
 
+* TIP: jak zrobić for - użyć map :)
+

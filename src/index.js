@@ -12,8 +12,9 @@ const divStyle = {
 class Scene extends React.Component {
     constructor() {
         super();
+        const posts = JSON.parse(localStorage.getItem('posts')) || [];
         this.state = {
-            posts: []
+            posts
         };
     }
 
@@ -23,6 +24,7 @@ class Scene extends React.Component {
         this.setState({
             posts
         });
+        localStorage.setItem('posts', JSON.stringify(posts));
     }
 
     render () {
